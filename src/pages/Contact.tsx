@@ -56,7 +56,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-medium text-foreground">ঠিকানা</h3>
                       <p className="text-muted-foreground text-sm">
-                        ১২৩, মিরপুর রোড, ঢাকা-১২১৬, বাংলাদেশ
+                       2nd Floor,House#19 , Road No : 5 Benaroshi Polli, Mirpur-10 Dhaka, 1216
                       </p>
                     </div>
                   </div>
@@ -68,10 +68,10 @@ const Contact = () => {
                     <div>
                       <h3 className="font-medium text-foreground">ফোন</h3>
                       <p className="text-muted-foreground text-sm">
-                        +৮৮০ ১৭XX-XXXXXX
+                       +880 1521 49 51 94
                       </p>
                       <p className="text-muted-foreground text-sm">
-                        +৮৮০ ২-XXXXXXX
+                       +880 1728 05 51 83
                       </p>
                     </div>
                   </div>

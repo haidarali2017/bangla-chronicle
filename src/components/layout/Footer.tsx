@@ -108,11 +108,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-background/70">
                 <MapPin size={16} className="text-primary flex-shrink-0" />
-                <span>১০০ মতিঝিল বাণিজ্যিক এলাকা, ঢাকা-১০০০</span>
+                <span>2nd Floor,House#19 , Road No : 5 Benaroshi Polli, Mirpur-10 Dhaka, 1216</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-background/70">
                 <Phone size={16} className="text-primary flex-shrink-0" />
-                <span>+৮৮০ ২-৯৫৫০০০০</span>
+                <span>+880 1521 49 51 94</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-background/70">
                 <Mail size={16} className="text-primary flex-shrink-0" />
