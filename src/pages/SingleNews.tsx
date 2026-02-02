@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import MainLayout from "@/components/layout/MainLayout";
-import { Clock, User, Share2, Facebook, Twitter, MessageCircle, ChevronRight, ChevronLeft } from "lucide-react";
+import { Clock, User, ChevronRight, MessageCircle } from "lucide-react";
 import NewsCard from "@/components/news/NewsCard";
+import ShareButtons from "@/components/news/ShareButtons";
 
 // Mock data for a single news
 const mockNewsData = {
@@ -78,9 +79,9 @@ const SingleNews = () => {
 
   return (
     <MainLayout>
-      <article className="max-w-4xl">
-        {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-sm text-caption mb-4">
+      <article className="max-w-4xl print:max-w-none print:m-0">
+        {/* Breadcrumb - Hide on print */}
+        <nav className="flex items-center gap-2 text-sm text-caption mb-4 print:hidden">
           <Link to="/" className="hover:text-primary">হোম</Link>
           <ChevronRight size={14} />
           <Link to={`/category/${news.category.toLowerCase()}`} className="hover:text-primary">
@@ -94,13 +95,13 @@ const SingleNews = () => {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-2xl md:text-3xl lg:text-4xl font-bold text-headline leading-relaxed mb-4"
+          className="text-2xl md:text-3xl lg:text-4xl font-bold text-headline leading-relaxed mb-4 print:text-2xl"
         >
           {news.title}
         </motion.h1>
 
         {/* Meta */}
-        <div className="flex flex-wrap items-center gap-4 mb-6 pb-4 border-b border-divider">
+        <div className="flex flex-wrap items-center gap-4 mb-6 pb-4 border-b border-divider print:border-black">
           <span className="flex items-center gap-1 text-sm text-caption">
             <User size={14} />
             {news.author}
@@ -109,34 +110,14 @@ const SingleNews = () => {
             <Clock size={14} />
             {news.publishDate}
           </span>
-          <span className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded">
+          <span className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded print:bg-gray-200 print:text-black">
             {news.category}
           </span>
           
-          {/* Share Buttons */}
-          <div className="flex items-center gap-2 ml-auto">
+          {/* Share Buttons - Hide on print */}
+          <div className="flex items-center gap-2 ml-auto print:hidden">
             <span className="text-sm text-caption hidden sm:inline">শেয়ার করুন:</span>
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-8 h-8 rounded-full bg-[#1877F2] flex items-center justify-center text-white"
-            >
-              <Facebook size={16} />
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-8 h-8 rounded-full bg-[#1DA1F2] flex items-center justify-center text-white"
-            >
-              <Twitter size={16} />
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-muted-foreground"
-            >
-              <Share2 size={16} />
-            </motion.button>
+            <ShareButtons title={news.title} showPrint={true} />
           </div>
         </div>
 
