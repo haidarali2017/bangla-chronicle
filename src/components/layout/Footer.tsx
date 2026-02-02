@@ -14,7 +14,8 @@ const Footer = () => {
       { label: "আমাদের সম্পর্কে", href: "/about" },
       { label: "যোগাযোগ", href: "/contact" },
       { label: "বিজ্ঞাপন", href: "/advertising" },
-      { label: "ক্যারিয়ার", href: "/careers" },
+      { label: "ক্যারিয়ার", href: "/career" },
+      { label: "চাকরি", href: "/jobs" },
     ],
     legal: [
       { label: "গোপনীয়তা নীতি", href: "/privacy-policy" },
@@ -27,6 +28,7 @@ const Footer = () => {
       { label: "খেলা", href: "/sports" },
       { label: "অর্থনীতি", href: "/economy" },
       { label: "বিনোদন", href: "/entertainment" },
+      { label: "আজকের পত্রিকা", href: "/todays-paper" },
     ],
   };
 
@@ -45,15 +47,10 @@ const Footer = () => {
           {/* Brand Section */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">প্র</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">প্রতিদিনের সংবাদ</h3>
-              </div>
+              <img src="/logo.png" alt="Softstation 71" className="h-10" />
             </Link>
             <p className="text-sm text-background/70 mb-4 leading-relaxed">
-              বাংলাদেশের সবচেয়ে বিশ্বস্ত অনলাইন সংবাদপত্র। সর্বশেষ খবর, বিশ্লেষণ এবং মতামত প্রকাশ করে।
+              Softstation 71 - বাংলাদেশের সবচেয়ে বিশ্বস্ত অনলাইন সংবাদপত্র। সর্বশেষ খবর, বিশ্লেষণ এবং মতামত প্রকাশ করে।
             </p>
             <div className="flex items-center gap-3">
               {socialLinks.map(({ icon: Icon, href, label }) => (
@@ -119,7 +116,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-sm text-background/70">
                 <Mail size={16} className="text-primary flex-shrink-0" />
-                <span>info@protidiner-sangbad.com</span>
+                <span>info@softstation71.com</span>
               </li>
             </ul>
           </div>
@@ -131,7 +128,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-background/60">
-              © {banglaYear} প্রতিদিনের সংবাদ। সর্বস্বত্ব সংরক্ষিত।
+              © {banglaYear} Softstation 71। সর্বস্বত্ব সংরক্ষিত।
             </p>
             <div className="flex items-center gap-4">
               {footerLinks.legal.map((link) => (

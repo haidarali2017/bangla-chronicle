@@ -14,6 +14,13 @@ import SecurityPolicy from "./pages/SecurityPolicy";
 import Terms from "./pages/Terms";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
+import About from "./pages/About";
+import TodaysPaper from "./pages/TodaysPaper";
+import Latest from "./pages/Latest";
+import Contact from "./pages/Contact";
+import Career from "./pages/Career";
+import Advertising from "./pages/Advertising";
+import Jobs from "./pages/Jobs";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +41,13 @@ const App = () => (
           <Route path="/security-policy" element={<SecurityPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/category/:category" element={<Category />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/todays-paper" element={<TodaysPaper />} />
+          <Route path="/latest" element={<Latest />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/advertising" element={<Advertising />} />
+          <Route path="/jobs" element={<Jobs />} />
           <Route path="/bangladesh" element={<Category />} />
           <Route path="/international" element={<Category />} />
           <Route path="/sports" element={<Category />} />
