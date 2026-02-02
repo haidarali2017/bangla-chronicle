@@ -4,6 +4,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Print Styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+  
+  nav, footer, .sidebar, .ad-placeholder, .no-print {
+    display: none !important;
+  }
+  
+  article {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 20px !important;
+  }
+  
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+}
+
 /* Bangla Newspaper Design System */
 
 @layer base {
